@@ -9,7 +9,6 @@ def send_help(update, context):
 
 
 def first_question(update, context):
-    print(update.effective_chat.id)
     context.bot.send_message(
         chat_id=update.effective_chat.id,
         text="Привет! Я помогу отличить кота от хлеба! Объект перед тобой квадратный?"

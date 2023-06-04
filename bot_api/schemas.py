@@ -2,8 +2,6 @@ from pydantic import BaseModel
 
 
 class LoginDataSchema(BaseModel):
-    api_id: str
-    api_hash: str
     phone_number: str
 
 
@@ -21,3 +19,11 @@ class LoginByPhoneSchema(BaseModel):
 class MessageSchema(BaseModel):
     user_id: int
     message: str
+
+
+class BotAnswerSchema(BaseModel):
+    answer_from_bot: str = 'Answer from @EoraTaskBot'
+
+
+class LoginSuccessSchema(BaseModel):
+    message: str = 'Login as @username (user_id - id) successful'
